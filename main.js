@@ -7,7 +7,7 @@ function getDrink(){
         console.log(data.drinks[0])
         document.querySelector('h2').innerText = data.drinks[0].strDrink
         document.querySelector('h3').innerText = data.drinks[0].strInstructions
-        document.querySelector('img').src = data.drinks[0].strDrinkThumb
+        document.querySelector('#drinkPicture').src = data.drinks[0].strDrinkThumb
         
         for(let i = 1; i < 16; i++){
             if(data.drinks[0][`strIngredient${i}`] === null){
