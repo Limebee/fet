@@ -1,6 +1,7 @@
- document.querySelector('button').addEventListener('click', getDrink)
+ document.querySelector('button').addEventListener('click',refreshPage)
 
-function getDrink(){
+
+ 
      fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
      .then(res => res.json())
      .then(data => {
@@ -26,4 +27,8 @@ function getDrink(){
     .catch(err => {
         console.log(`error ${err}`)
     })
-}
+ 
+
+ function refreshPage(){
+    window.location.reload();
+} 
